@@ -2,9 +2,9 @@ rtMaven = null
 server= null
 pipeline {
   agent any
-  tools {
-    maven 'Maven3'
-  }
+    tools {
+      maven 'Maven3'
+    }
   stages {
     stage ('Build') {
       steps {
@@ -16,8 +16,7 @@ pipeline {
       jacoco()
       }
     }
-    
-     stage ('Nexus Upload') {
+    stage ('Nexus Upload') {
       steps {
       nexusArtifactUploader(
       nexusVersion: 'nexus3',
@@ -35,5 +34,6 @@ pipeline {
       ])
       }
       }
+    
   }
 }
