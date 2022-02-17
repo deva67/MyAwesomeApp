@@ -41,5 +41,5 @@ pipeline {
         deploy adapters: [tomcat9(credentialsId: 'a7f0f3a8-16b5-4c98-918b-ff44789c583b', path: '', url: 'http://ec2-3-145-196-2.us-east-2.compute.amazonaws.com:8090')], contextPath: null, war: '**/*.war'
         }
     }
-    
+  }   
 }
